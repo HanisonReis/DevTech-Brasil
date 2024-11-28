@@ -1,0 +1,207 @@
+/* <DECLARAÇÃO DE CORES> */
+:root {
+    --amarelo: #f3e959;
+    --azul: #0026ff;
+    --branco: #ffffff;
+    --cian: #00f7ff;
+    --laranja: #ff7b00;
+    --preto: #000000;
+    --roxo: #d400ff;
+    --verde: #00ff00;
+    --roxo-trp: #d400ffb7;
+}
+/* </DECLARAÇÃO DE CORES> */
+
+body {
+    background-color: var(--preto);
+    color: var(--laranja);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+nav .menu {
+    background-color: var(--roxo-trp);
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+}
+
+nav .menu li {
+    display: inline;
+    padding: 5px;
+}
+
+nav .menu li a {
+    gap: 30px;
+    font-size: 40px;
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--roxo);
+    background-color: var(--verde);
+    padding: 4px 20px;
+    transition: background-color 0.3s;
+    border-radius: 15px;
+}
+
+nav .menu li a:hover {
+    background-color: var(--roxo);
+    color: var(--verde);
+    transition: 0.6s;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--roxo);
+}
+
+h2 span {
+    color: var(--roxo);
+    font-weight: 900;
+}
+
+h3 span {
+    color: var(--roxo);
+    font-weight: 900;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.programas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.programa {
+    margin-top: 150px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.333% - 70px); /* 3 colunas com espaçamento */
+    box-sizing: border-box;
+}
+
+.programa-img {
+    border: 3px solid var(--roxo-trp);
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.programa-img:hover {
+    transform: scale(1.1);
+}
+
+.download-btn {
+    background-color: var(--roxo);
+    color: var(--verde);
+    font-weight: 900;
+    display: block; /* Garante que o botão seja exibido como um bloco */
+    margin: 10px auto 0; /* Adiciona margem superior e centraliza o botão */
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 300px;
+    background-color: var(--roxo-trp);
+    color: var(--branco);
+    font-weight: 400;
+    text-align: justify;
+    border-radius: 15px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 103%; /* Position the tooltip above the image */
+    left: 50%;
+    margin-left: -100px;
+    opacity: 50%;
+    transition: opacity 0.3s;
+}
+
+.programa:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.profile-img {
+    width: 150px;
+    height: auto;
+}
+
+form {
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+form label {
+    margin-top: 2px;
+}
+
+form input, form textarea {
+    width: 300px;
+    padding: 10px;
+    border: 3px solid var(--roxo);
+    border-radius: 5px;
+}
+
+form button {
+    font-size: 20px;
+    font-weight: 900;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--verde);
+    color: var(--roxo);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: var(--roxo);
+    color: var(--verde);
+}
+
+footer {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--verde);
+    font-size: 20px;
+    font-weight: 900;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
